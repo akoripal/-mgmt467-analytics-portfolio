@@ -1,0 +1,84 @@
+#Logistic Regression in BigQuery ML  
+**Lab:** Predicting Customer Churn with Logistic Regression  
+**File:** `Logistic_Regression_BQML.ipynb`  
+**Author:** Anurag Koripalli  
+
+---
+
+##Objective  
+Build and evaluate a **logistic regression model** in **BigQuery ML** to predict customer churn based on demographic, subscription, and behavioral features.  
+This lab demonstrates how to integrate SQL-based machine learning within BigQuery for efficient model development, training, and evaluation.
+
+---
+
+##Learning Outcomes  
+- Understand how **BigQuery ML** enables machine learning directly in SQL.  
+- Create and train a **logistic regression model** to classify churn outcomes.  
+- Evaluate performance using key metrics — **accuracy**, **log_loss**, and **ROC AUC**.  
+- Interpret model results to understand how feature quality affects predictions.
+
+---
+
+##Workflow Overview  
+
+| Step | Description | Output |
+|------|--------------|--------|
+| 1️⃣ | Prepared churn dataset with demographic and engagement features | `churn_features` table |
+| 2️⃣ | Created logistic regression model | `churn_model` |
+| 3️⃣ | Evaluated model performance using `ML.EVALUATE` | Accuracy, log_loss, ROC AUC |
+| 4️⃣ | Generated predictions via `ML.PREDICT` | Probability-based churn scores |
+| 5️⃣ | Interpreted metrics and reflected on model improvements | Enhanced understanding of logistic regression |
+
+---
+
+##Key Metrics  
+| Metric | Value | Interpretation |
+|--------|--------|----------------|
+| Accuracy | ~0.85 | Model correctly predicted 85% of churn outcomes |
+| Log Loss | ~0.42 | Indicates moderate calibration and probability confidence |
+| ROC AUC | ~0.51 | Suggests limited separation; further feature engineering needed |
+
+---
+
+##Short Reflection Overview  
+This lab demonstrated how to efficiently build a logistic regression model using **BigQuery ML** without leaving the SQL environment.  
+Through dataset preparation, training, evaluation, and prediction, I gained practical insight into how **feature quality and class balance** directly affect model performance and generalization.  
+The workflow also reinforced the importance of **interpreting metrics holistically** rather than focusing on a single score.
+
+---
+
+##DIVE Mindset Reflection  
+
+**Describe:**  
+I built a logistic regression model using BigQuery ML to predict customer churn, performing model creation, evaluation, and prediction entirely through SQL queries.
+
+**Interpret:**  
+Each query clarified how feature engineering, missingness, and categorical encoding influence model accuracy and stability.
+
+**Validate:**  
+By analyzing accuracy, log_loss, and ROC AUC, I validated the model’s predictive behavior — realizing it performed reasonably but lacked depth for complex churn patterns.
+
+**Explore:**  
+Next, I plan to experiment with **boosted trees** and **neural network models** in BigQuery ML and enhance interpretability through **feature importance analysis** and **data enrichment**.
+
+---
+
+##Files in This Folder  
+
+| File | Description |
+|------|--------------|
+| `Lab_6_Logistic_Regression_BQML_AK.ipynb` | BigQuery ML notebook for churn modeling |
+| `README.md` | This documentation file |
+
+---
+
+##Tech Stack  
+- **Google BigQuery ML**  
+- **SQL (Standard SQL)**  
+- **Google Colab**  
+
+---
+
+##Author  
+**Anurag Koripalli**  
+
